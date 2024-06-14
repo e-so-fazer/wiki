@@ -6,8 +6,8 @@ help:
 	@echo "This makefile builds KACTL (KTH Algorithm Competition Template Library)"
 	@echo ""
 	@echo "Available commands are:"
-	@echo "	make fast		- to build KACTL, quickly (only runs LaTeX once)"
-	@echo "	make kactl		- to build KACTL"
+	@echo "	make fast		- to build Wiki, quickly (only runs LaTeX once)"
+	@echo "	make wiki		- to build Wiki"
 	@echo "	make clean		- to clean up the build process"
 	@echo "	make veryclean		- to clean up and remove kactl.pdf"
 	@echo "	make test		- to run all the stress tests in stress-tests/"
@@ -18,20 +18,20 @@ help:
 	@echo "For more information see the file 'doc/README'"
 
 fast: | build
-	$(LATEXCMD) content/kactl.tex </dev/null
-	cp build/kactl.pdf kactl.pdf
+	$(LATEXCMD) content/wiki.tex </dev/null
+	cp build/wiki.pdf wiki.pdf
 
-kactl: test-session.pdf | build
-	$(LATEXCMD) content/kactl.tex && $(LATEXCMD) content/kactl.tex
-	cp build/kactl.pdf kactl.pdf
+wiki: test-session.pdf | build
+	$(LATEXCMD) content/wiki.tex && $(LATEXCMD) content/wiki.tex
+	cp build/wiki.pdf wiki.pdf
 
 clean:
-	cd build && rm -f kactl.aux kactl.log kactl.tmp kactl.toc kactl.pdf kactl.ptc
+	cd build && rm -f wiki.aux wiki.log wiki.tmp wiki.toc wiki.pdf wiki.ptc
 
 veryclean: clean
-	rm -f kactl.pdf test-session.pdf
+	rm -f wiki.pdf test-session.pdf
 
-.PHONY: help fast kactl clean veryclean
+.PHONY: help fast wiki clean veryclean
 
 build:
 	mkdir -p build/

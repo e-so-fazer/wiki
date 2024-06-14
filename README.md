@@ -14,9 +14,16 @@ Downloading latex on debian base linux:
 sudo apt install texlive
 ```
 
+# Running
+
+```sh
+make kactl
+```
+
 ## Testing
 
-TODO
+make test-compiles
+make test
 
 ## License
 TODO
