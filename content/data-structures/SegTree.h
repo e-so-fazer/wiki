@@ -16,7 +16,7 @@ struct SegTree {
 	vector<S> seg;
 
 	SegTree(const vector<S> & v)
-		: n(v.size()), seg(2*n) {
+		: n(sz(v)), seg(2*n) {
 		rep(i, 0, n) seg[i+n] = v[i];
 		for(int i = n-1; i >= 1; i--) seg[i] = LS::op(seg[i*2], seg[i*2+1]);
 	}
@@ -41,6 +41,6 @@ struct Spec {
 	using S = int;
 	using K = int;
 	static S op(S a, S b) { return max(a, b); }
-	static S update(K f, S a) { return f; }
+	static S update(K f, S a) { return f + a; }
 	static S id() { return 0; }
 };

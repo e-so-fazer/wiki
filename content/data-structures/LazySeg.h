@@ -18,7 +18,7 @@ struct LazySeg {
 	vector<bool> has_lazy;
 	// vector<int> lx, rx; // Aditional info
 	
-    LazySeg(vector<S> & v) : n(v.size()), seg(2*n) , lazy(n), has_lazy(n) {
+    LazySeg(vector<S> & v) : n(sz(v)), seg(2*n) , lazy(n), has_lazy(n) {
 		rep(no, 0, n) seg[no+n] = v[no];
 		for (int no = n-1; no >= 1; no--) pull(no);
 
