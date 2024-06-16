@@ -8,22 +8,23 @@ The build process uses the following tools:
 - Python	
 - make
 
-Downloading latex on debian base linux:
-
+Downloading latex on ubuntu and debian base linux:
 ```sh
-sudo apt install texlive
+sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra
 ```
 
 # Running
 
 ```sh
-make kactl
+make wiki
 ```
 
 ## Testing
 
+```sh
 make test-compiles
 make test
+```
 
 ## License
 TODO
