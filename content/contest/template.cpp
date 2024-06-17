@@ -7,7 +7,7 @@ using namespace std;
 #define rep(i, a, b) for(int i = (a); i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
-#define debug(var) cout << #var << ": " << var << endl
+#define debug(var) cerr << #var << ": " << var << endl
 #define pb push_back
 #define eb emplace_back
 typedef long long ll;
