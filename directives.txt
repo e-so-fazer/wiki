@@ -1,0 +1,43 @@
+Directives for building and maintaining team wiki
+
+- General:
+English language only
+
+- Wiki PDF:
+Short, but complete
+Basic directives to follow in contest
+Important pieces of code: summary, implementation, usage
+Important theorems and facts
+
+- Wiki content:
+Include author, description, time and memory complexity, observations/restrictions
+Include testing status: stress-tests, relevant problems where used
+Use of comments to explain usage?
+
+- Wiki code:
+Should be working correctly:
+    Tested at chanllenging problems
+    Using intended complexity (and good constant factor)
+    Compiling in C++17 and C++20 (if possible)
+Should follow hierarchy:
+    Basic data as containers/types
+    Basic processes as functions
+    Union of processes and/or data as structs
+    Outer processes should not worry about inner's details
+Should be as abstract as possible:
+    Use of template types internally
+    Easy modification of variable processes
+    Support generalization of original functionality
+Should be as short as possible:
+    Avoid extra functions and data
+    Avoid too many whitespaces and lines
+    Use macros and short names
+
+- Stress tests:
+Brute force small cases
+Add few big/corner cases
+
+- Wiki Theorems/Techniques:
+Basic enunciation
+Effects/observations
+Restrictions/special cases
