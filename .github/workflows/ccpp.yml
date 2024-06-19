@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install pdflatex
-      run: sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra
+      run: sudo apt update && sudo apt install texlive-latex-base texlive-latex-recommended texlive-latex-extra
     - name: Build pdf
       run: make wiki
     - name: Run compiles
