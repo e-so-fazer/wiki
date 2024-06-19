@@ -1,8 +1,8 @@
 
 /*
    Used in the following problems:
-   - https://codeforces.com/problemset/problem/713/D
-   - https://cses.fi/problemset/task/1647
+   - https://codeforces.com/problemset/problem/372/B
+   - https://cses.fi/problemset/task/1646
 */
 
 #include "../utilities/template.h"

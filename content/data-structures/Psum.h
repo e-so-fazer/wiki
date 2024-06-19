@@ -1,8 +1,8 @@
 /**
  * Author: Arthur Botelho
- * Description: Multidimensional BIT/Fenwick Tree
+ * Description: Multidimensional Psum
  * Requires Abelian Group S (op, inv, id)
- * Time: O((\log N)^D)
+ * Time: O(1)
  * Memory: O(N^D)
  * Status: not yet tested
  */
