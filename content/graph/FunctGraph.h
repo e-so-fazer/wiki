@@ -1,4 +1,4 @@
-/*
+/**
  * Author: Arthur Botelho
  * Description: Functional Graph
  * Time: O(n)

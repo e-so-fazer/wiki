@@ -1,4 +1,4 @@
-/*
+/**
  * Author: Arthur Botelho
  * Description: KMP automaton
  * Time: O(n) build, O(1) query
