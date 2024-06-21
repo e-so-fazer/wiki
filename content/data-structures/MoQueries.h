@@ -7,7 +7,7 @@
  */
 
 vi mo(vector<pii> Q, vector<int> V) { // Queries in Q are [l, r)
-	int L = 0, R = 0, blk = 350; // ∼N/sqrt (Q)
+	int L = 0, R = 0, blk = 350; // N/sqrt (Q)
 
 	vi s(sz(Q)), res = s;
 	auto K = [&](pii x) {return pii(x.first/blk, x.second ^ -(x.first/blk & 1)); };
