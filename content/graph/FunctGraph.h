@@ -8,18 +8,14 @@
 
 struct FunctGraph{
 	int n;
-	vector<vi> gr, comps;
 	vi head;
+	vector<vi> gr, comps;
 	
 	FunctGraph(vi& fn):
 		n(sz(fn)), head(n, -1), gr(n){
 		rep(i, 0, n)gr[fn[i]].pb(i);
 		vi visited(n, 0);
-<<<<<<< HEAD
-		auto dfs = [&](auto rec, int v, int c)->void{
-=======
 		auto dfs = [&](auto rec, int v, int c) -> void{
->>>>>>> d4974a2bbda5c1a11210e7c7ea447b895acf1691
 			head[v] = c; visited[v] = 1;
 			for(int f : gr[v])if (head[f]!=f)rec(rec, f, c);
 		};
