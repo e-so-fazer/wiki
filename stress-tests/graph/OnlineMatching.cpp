@@ -1,5 +1,5 @@
 #include "../utilities/template.h"
-#include "../../content/matching/OnlineMatching.h"
+#include "../../content/graph/OnlineMatching.h"
 
 /*
    Used in the following problems:
