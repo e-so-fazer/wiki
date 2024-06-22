@@ -7,7 +7,7 @@
 */
 
 
-Struct KMP{
+struct KMP{
 	const int inic = 'a';
 	int n; vi pi; vector<vi> aut;
 	KMP(string s):n(s.size()),pi(n),aut(n+1, vi(26,0)){
