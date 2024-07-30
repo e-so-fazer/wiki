@@ -22,10 +22,9 @@ struct FunctGraph{
 		rep(i, 0, n){
 			if (visited[i])continue;
 			int l=fn[i], r=fn[fn[i]];
-			while(l!=r) l=fn[l],r=fn[fn[r]];
-			vi cur = {r}; l = fn[l];
-			for(;l!=r;l=fn[l]) cur.pb(l);
-			for(int x : cur) head[x] = x;
+			while(l!=r) l=fn[l], r=fn[fn[r]];
+			vi cur = {r}; 
+			for(l=fn[l]; l!=r; l=fn[l]) cur.pb(l);
 			for(int x : cur) dfs(dfs, x, x);
 			comps.pb(cur);
 		}
