@@ -42,7 +42,7 @@ struct maximumSpec {
 int main() {
 	rep(n,1,10) {
 		vi v(n, maximumSpec::id());
-		SegTree<maximumSpec> tr(v);
+		SegTree<maximumSpec> tr(n);
 		rep(it,0,1000000) {
 			int i = rand() % (n+1), j = rand() % (n+1);
 			int x = rand() % (n+2);
@@ -63,7 +63,7 @@ int main() {
 
 	rep(n,1,10) {
 		vi v(n);
-		SegTree<nonabelianSpec> tr(v);
+		SegTree<nonabelianSpec> tr(n);
 		rep(it,0,1000000) {
 			int i = rand() % (n+1), j = rand() % (n+1);
 			int x = rand() % 6;
