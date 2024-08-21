@@ -1,5 +1,3 @@
-Geometria
-CHT (min/max)
 Xor Basis
 Treap
 Bucket Decomposition
