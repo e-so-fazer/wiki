@@ -10,6 +10,7 @@ array<ll, 3> exgcd(ll a, ll b) {
 	return {y - b / a * x , x, g};
 }
 
+// if (x,y) is a solution (x-kb/d, y+ka/d) for all integer k
 array<ll, 4> find_any_solution(ll a, ll b, ll c) {
 	assert(a != 0 || b != 0);
 	auto[x, y, g] = exgcd(a, b);
