@@ -1,0 +1,16 @@
+Geometria
+CHT (min/max)
+Xor Basis
+Treap
+Bucket Decomposition
+Gaussian Elimination
+Aho
+Block Cut Tree
+Ternary search
+HLD
+Centroid
+Seg Dinamica multidimensional
+Chinese Remainder Theorem
+Half GCD
+
+Psum Dinamica Multidimensional
