@@ -4,15 +4,15 @@
  * Time: O(V*E*log(maxVal))
  * Memory: O(V+E)
  * Status: not yet tested
-
-  * Observations:
+  */
+/*
+  Observations:
   * --- Edge capacity is implemented as "remaining capacity for flow",
   *		without variable for current passing flow
   *	--- Zero limit (eps) should be changed according to required precision
   *		for float capacity edges
   *		Tested at: CSES-Download Speed 
-  */
-
+*/
 template<class T>
 struct Dinic{
 	struct Edge{int a, b; T w; bool rev;};
