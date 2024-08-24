@@ -1,15 +1,14 @@
 /**
  * Author: Arthur Botelho, Eduardo Freire
  * Description: KMP automaton
- * Time: O(alphabet_size * n) build, O(1) query
- * Memory: O(alphabet_size * n)
+ * Time: O(alphabet size * n) build, O(1) query
+ * Memory: O(alphabet size * n)
  * Status: not yet tested
 */
 
 template<class T>
 struct KMP{
 	T in; int n; vi p; vector<vi> a;
-
 	template<class S>
 	KMP(S s, T ain, int asz):n(sz(s)),p(n), in(ain), a(n+1, vi(asz,0)){
 		rep(i, 1, n){

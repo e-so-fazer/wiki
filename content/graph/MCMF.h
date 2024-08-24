@@ -9,6 +9,10 @@
  *	--- DFS: O(E*V)?
  * Memory: O(V+E)
  * Status: not yet tested
+ */
+ 
+/*
+
  * Observations:
  * --- pots_init is only useful if there are negative initial costs
  * --- Dijkstra path recover can be used as (slower?) alternative to push flow
