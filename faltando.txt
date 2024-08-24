@@ -3,7 +3,6 @@ Bucket Decomposition
 Gaussian Elimination
 Block Cut Tree
 Ternary search
-HLD
 Centroid
 Seg Dinamica multidimensional
 Chinese Remainder Theorem
