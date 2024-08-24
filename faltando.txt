@@ -1,8 +1,6 @@
 Xor Basis
-Treap
 Bucket Decomposition
 Gaussian Elimination
-Aho
 Block Cut Tree
 Ternary search
 HLD
