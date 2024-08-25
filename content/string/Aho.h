@@ -1,8 +1,8 @@
 /**
  * Author: Eduardo Freire
  * Description: Aho automaton
- * Time: O(alphabet_size * n) build, O(1) query
- * Memory: O(alphabet_size * n)
+ * Time: O(alphabet size * n) build, O(1) query
+ * Memory: O(alphabet size * n)
  * Status: not yet tested
 */
 

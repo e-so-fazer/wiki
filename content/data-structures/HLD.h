@@ -6,6 +6,7 @@
  * Status: stress-tested
  */
 
+#include "SegTree.h"
 
 // If T::op is commutative, memory usage can be cut in half by removing 'segi' from the code.
 // Simply remove it and replace every occurrence of segi.query(n-r, n-l) with seg.query(l,r).
