@@ -1,0 +1,11 @@
+Xor Basis
+Bucket Decomposition
+Gaussian Elimination
+Block Cut Tree
+Ternary search
+Centroid
+Seg Dinamica multidimensional
+Chinese Remainder Theorem
+Half GCD
+
+Psum Dinamica Multidimensional

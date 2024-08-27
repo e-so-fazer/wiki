@@ -1,32 +1,29 @@
 /**
- * Author: Arthur Botelho
+ * Author: Arthur Botelho, Eduardo Freire
  * Description: KMP automaton
- * Time: O(n) build, O(1) query
- * Memory: O(26n)
+ * Time: O(alphabet size * n) build, O(1) query
+ * Memory: O(alphabet size * n)
  * Status: not yet tested
 */
 
-
+template<class T>
 struct KMP{
-	const int inic = 'a';
-	int n; vi pi; vector<vi> aut;
-	KMP(string s):n(s.size()),pi(n),aut(n+1, vi(26,0)){
+	T in; int n; vi p; vector<vi> a;
+	template<class S>
+	KMP(S s, T ain, int asz):n(sz(s)),p(n), in(ain), a(n+1, vi(asz,0)){
 		rep(i, 1, n){
-			int j = pi[i-1];
-			while(j > 0 and s[j]!=s[i])j = pi[i-1];
-			pi[i] = j + (s[i]==s[j]);
+			int j = p[i-1];
+			while(j and s[j]!=s[i])j = p[j-1];
+			p[i] = j + (s[i]==s[j]);
 		}
-		s.pb('#');
-		rep(i, 0, n+1){
-			rep(c, 0, 26){
-				if (i > 0 and c+inic!=s[i])aut[i][c] = aut[pi[i-1]][c];
-				else aut[i][c] = i + (c+inic == s[i]);
+		rep(i, 0, n+1)
+			rep(c, 0, asz){
+				if (i and (i==n or c+in!=s[i]))a[i][c] = a[p[i-1]][c];
+				else a[i][c] = i + (c+in == s[i]);
 			}
-		}
 	}
-	pair<bool, int> nxt(int cur, char c){
-		cur = aut[cur][c];
-		return {cur==n, cur};
+	int nxt(int cur, T c){
+		return a[cur][c-in];
 	}
 };
-	
+
