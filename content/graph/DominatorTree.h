@@ -15,9 +15,9 @@ struct DominatorTree {
 	int dfstime =0;
 
 	DominatorTree(vector<vector<int>> & _g, int root) 
-      : n(sz(_g)), g(_g), gt(n), tree(n), bucket(n), down(n), 
-      S(n), dsu(n), label(n), sdom(n), idom(n), id(n) {
-		prep(root); reverse(all(S));
+	  : n(sz(_g)), g(_g), gt(n), tree(n), bucket(n), down(n), 
+	  S(n), dsu(n), label(n), sdom(n), idom(n), id(n) {
+		prep(root); reverse(S.begin(), S.begin() + dfstime);
 		for(int u : S) {
 			for(int v : gt[u]) {
 				int w = fnd(v);
@@ -35,11 +35,12 @@ struct DominatorTree {
 			for(int v : down[u]) dsu[v] = u;
 			down[u].clear();
 		}
-		reverse(S.begin(), S.end());
+		reverse(S.begin(), S.begin() + dfstime);
 		for(int u : S) if(u != root) {
 			if(idom[u] != sdom[u]) idom[u] = idom[ idom[u] ];
 			tree[ idom[u] ].push_back(u);
 		}
+		idom[root] = root;
 	}
 	void prep(int u){
 		S[dfstime] = u;
@@ -63,4 +64,3 @@ struct DominatorTree {
 	}
 
 };
-
