@@ -2,9 +2,7 @@ Xor Basis
 Bucket Decomposition
 Gaussian Elimination
 Ternary search
-Centroid
 Seg Dinamica multidimensional
 Chinese Remainder Theorem
-Half GCD
 
 Psum Dinamica Multidimensional
