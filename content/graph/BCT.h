@@ -31,7 +31,7 @@ struct Bcc {
 		tin[a] = ++dfstime;
 		int top = tin[a];
 		bool child = false;
-		for (auto [b, e]: g[a]) {
+		for (auto [b, e]: g[a]) if (e != p) {
 			if (tin[b]) {
 				top = min(top, tin[b]);
 				if (tin[b] < tin[a]) {
