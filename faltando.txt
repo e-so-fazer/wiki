@@ -6,8 +6,6 @@ Ternary search
 Lagrange
 SegTree Beats
 Color update
-Iterate all submasks in O(3^n)
 Chinese Remainder Theorem
-Max bound of divisors of numbers
 Seg Dinamica multidimensional
 Psum Dinamica Multidimensional
