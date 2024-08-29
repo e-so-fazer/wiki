@@ -4,6 +4,7 @@ Gaussian Elimination
 Ternary search
 SegTree Beats
 Color update
+Iterate all submasks in O(3^n)
 Seg Dinamica multidimensional
 Chinese Remainder Theorem
 
