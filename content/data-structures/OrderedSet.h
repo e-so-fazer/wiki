@@ -4,7 +4,7 @@
  * Bad constant factor, works only in Linux
  * Time: O(\log N) operations
  * Memory: O(N)
- * Status: not stress-tested
+ * Status: stress-tested
 */
 
 #include<bits/extc++.h> //include it before int long long
@@ -32,10 +32,10 @@ void example(){
 	rep(i, 0, 3){
 		o1.insert(i); o2.insert(i); o2.insert(i);
 	}
-	cout << o1.size() << esp << o2.size() << endl; //3 6
+	cout << o1.size() << ' ' << o2.size() << endl; //3 6
 	int p1 = o1.order_of_key(1); //=1, one element smaller than 1
 	int p2 = o2.order_of_key(2); //=2
 	int x = *o1.find_by_order(2); //=2
 	int y = *o2.find_by_order(2); //=1
-	cout << x << esp << y << endl;
+	cout << x << ' ' << y << endl;
 }

@@ -4,7 +4,7 @@
  * Requires Idempotent Monoid S (op, inv, id)
  * Time: O(1) query, O((n \log n)^D) build
  * Memory: O((n \log n)^D)
- * Status: not yet tested
+ * Status: stress-tested
  */
 #pragma once
 

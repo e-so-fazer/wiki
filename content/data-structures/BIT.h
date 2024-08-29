@@ -1,10 +1,10 @@
 /**
  * Author: Arthur Botelho
  * Description: Multidimensional BIT/Fenwick Tree
- * Requires Abelian Group "S" (op, inv, id)
+ * Requires Abelian Group (op, inv, id)
  * Time: O((\log N)^D)
  * Memory: O(N^D)
- * Status: not yet tested
+ * Status: stress-tested
  */
 #pragma once
 
