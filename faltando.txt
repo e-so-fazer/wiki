@@ -1,8 +1,6 @@
-Geometria
-Xor Basis
-Gaussian Elimination
-Ternary search
-Lagrange
-SegTree Beats
-Color update
-Chinese Remainder Theorem
+Geometria -> KACTL e Tiago
+Xor Basis -> KACTL
+Gaussian Elimination -> KACTL
+Ternary search -> KACTL
+Lagrange -> Tiago
+Chinese Remainder Theorem -> Tiago
