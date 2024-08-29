@@ -3,7 +3,7 @@
  * Description: modular int structure
  * Time: O(1) + and -, O(\log M) * and /
  * Memory: O(1)
- * Status: not stress-tested
+ * Status: stress-tested
 */
 
 using ll = long long;
@@ -26,7 +26,7 @@ template<int M> struct Z{
 	Z operator*(const Z<M> & o)const{
 		return {((ll)v*o.v)%M};
 	}
-	Z operator/(const Z<M> & o)const{
+	Z operator/(const Z<M> & o)const{//only works for prime MODs
 		return (*this) * fexp(o, M-2);
 	}
 	bool operator==(const Z<M> & o)const{
@@ -35,4 +35,4 @@ template<int M> struct Z{
 	operator int()const{return v;}	
 };
 
-//using mint = Z<MOD> , where MOD is prime smaller than 2^32
+//using mint = Z<MOD> , where MOD is smaller than 2^32

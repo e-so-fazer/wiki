@@ -3,6 +3,7 @@
  * Description: combinatorics structure
  * Time: O(mxn)
  * Memory: O(mxn)
+ * Status: stress-tested
 */
 
 #define mul(a, b) (((ll)a*b)%mod)

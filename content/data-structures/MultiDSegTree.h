@@ -1,12 +1,11 @@
 /**
  * Author: Arthur Botelho
  * Description: Multidimensional SegTree
- * Requires Monoid S (op, id)
+ * Requires Monoid (op, id)
  * Time: O((\log N)^D)
  * Memory: O(N^D)
- * Status: not yet tested
+ * Status: stress-tested
  */
-//#pragma once
 
 #define MAs template<class... As> //multiple arguments
 template<int D, class S>
@@ -34,7 +33,7 @@ template<class S>
 struct SegTree<0, S>{ using T = typename S::T;
 	T val=S::id;
 	T get(){return val;}
-	void update(T x){val=x;}
+	void update(T x){val=x;} //set update!
 	T query(){return val;}
 };
 

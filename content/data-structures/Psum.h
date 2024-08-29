@@ -1,10 +1,10 @@
 /**
  * Author: Arthur Botelho
  * Description: Multidimensional Psum
- * Requires Abelian Group S (op, inv, id)
+ * Requires Abelian Group (op, inv, id)
  * Time: O(1)
  * Memory: O(N^D)
- * Status: not yet tested
+ * Status: stress-tested
  */
 #pragma once
 
