@@ -25,6 +25,7 @@ struct FunctGraph{
 			while(l!=r) l=fn[l], r=fn[fn[r]];
 			vi cur = {r}; 
 			for(l=fn[l]; l!=r; l=fn[l]) cur.pb(l);
+			for(int x : cur) head[x] = x;
 			for(int x : cur) dfs(dfs, x, x);
 			comps.pb(cur);
 		}
