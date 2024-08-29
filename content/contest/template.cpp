@@ -2,8 +2,9 @@
 
 using namespace std;
 
-#define int long long
+//#define int long long
 #define endl '\n'
+#define esp ' '
 #define rep(i, a, b) for(int i = (a); i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
@@ -20,9 +21,8 @@ void solve() {
 }
 
 int32_t main() {
-	ios_base::sync_with_stdio(0); cout.tie(0); cin.tie(0);
+	ios_base::sync_with_stdio(0); cin.tie(0);
 	int t = 1;
+	//cin>>t;
 	while(t--) solve();
-
-	return 0;
 }

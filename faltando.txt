@@ -2,7 +2,10 @@ Xor Basis
 Bucket Decomposition
 Gaussian Elimination
 Ternary search
+SegTree Beats
+Color update
+Iterate all submasks in O(3^n)
 Seg Dinamica multidimensional
 Chinese Remainder Theorem
-
+Max bound of divisors of numbers
 Psum Dinamica Multidimensional
