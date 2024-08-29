@@ -8,11 +8,11 @@
 
 struct FunctGraph{
 	int n;
-	vi head;
-	vector<vi> gr, comps;
+	vi head, comp;
+	vector<vi> gr, cycles;
 	
 	FunctGraph(vi& fn):
-		n(sz(fn)), head(n, -1), gr(n){
+		n(sz(fn)), head(n, -1), comp(n), gr(n) {
 		rep(i, 0, n)gr[fn[i]].pb(i);
 		vi visited(n, 0);
 		auto dfs = [&](auto rec, int v, int c) -> void{
@@ -25,9 +25,9 @@ struct FunctGraph{
 			while(l!=r) l=fn[l], r=fn[fn[r]];
 			vi cur = {r}; 
 			for(l=fn[l]; l!=r; l=fn[l]) cur.pb(l);
-			for(int x : cur) head[x] = x;
+			for(int x : cur) head[x] = x, comp[x] = sz(cycles);
+			cycles.pb(cur);
 			for(int x : cur) dfs(dfs, x, x);
-			comps.pb(cur);
 		}
 	}
 };
