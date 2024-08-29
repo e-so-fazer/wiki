@@ -1,11 +1,8 @@
 Geometria
 Xor Basis
-Bucket Decomposition
 Gaussian Elimination
 Ternary search
 Lagrange
 SegTree Beats
 Color update
 Chinese Remainder Theorem
-Seg Dinamica multidimensional
-Psum Dinamica Multidimensional
