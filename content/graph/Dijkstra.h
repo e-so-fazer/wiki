@@ -1,7 +1,8 @@
 /**
  * Author: Arthur Botelho
  * Description: Dijskstra algorithm
- * Complexity: O(V + E \log E) or O(E + V^2)
+ * Time: O(V + E \log E) or O(E + V^2)
+ * Memory: O(V + E \log E) or O(V)
  * Status: not stress-tested
 */
 
