@@ -9,7 +9,7 @@
 using ll = long long;
 template<int M> struct Z{
 	signed v;
-	mint(int val=0){v = (val>=M ? (val%M) : val);}
+	Z(int val=0){v = (val>=M ? (val%M) : val);}
 	static Z<M> fexp(Z<M> a, int b){
 		Z<M> res(1);
 		for(;b;a=a*a,b>>=1)if(b&1)res=res*a;
