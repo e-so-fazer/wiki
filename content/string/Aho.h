@@ -12,7 +12,7 @@ struct Aho {
 	vi lnk, term, h;
  
 	// ain= initial alphabet letter, asi = alphabet size
-	Aho(char ain, int asi) {
+	Aho(char ain='a', int asi=26) {
 		in = ain;
 		si = asi;
 		tran.eb(si,-1);
@@ -35,11 +35,7 @@ struct Aho {
 		h.assign(n,0);
  
 		queue<int> q;
-		rep(c,0,si) {
-			int& f=tran[0][c];
-			if (f != -1) q.push(f), h[f]=1, nxt[0][c]=f;
-			else nxt[0][c]=0;
-		}
+		q.push(0);
 		while (!q.empty()) {
 			int a=q.front(); q.pop();
 			rep(c,0,si) {
@@ -47,7 +43,7 @@ struct Aho {
 				int fail=nxt[lnk[a]][c];
 				if (tran[a][c] != -1) {
 					b = tran[a][c];
-					lnk[b] = fail;
+					lnk[b] = a ? fail : 0;
 					q.push(b);
 					h[b]=h[a]+1;
 				} else b=fail;
@@ -55,4 +51,3 @@ struct Aho {
 		}
 	}
 };
-
