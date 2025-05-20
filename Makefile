@@ -26,18 +26,22 @@ wiki: test-session.pdf | build
 	cp build/wiki.pdf wiki.pdf
 
 clean:
-	cd build && rm -f wiki.aux wiki.log wiki.tmp wiki.toc wiki.pdf wiki.ptc
+	cd build && rm -rf wiki.aux wiki.log wiki.tmp wiki.toc wiki.pdf wiki.ptc snippets
 
 veryclean: clean
 	rm -f wiki.pdf test-session.pdf
 
-.PHONY: help fast wiki clean veryclean
+.PHONY: help fast wiki clean veryclean snippets
 
 build:
 	mkdir -p build/
 
 test:
 	./doc/scripts/run-all.sh .
+
+snippets:
+	mkdir -p build/snippets/cpp/
+	./doc/scripts/snippet-all.sh .
 
 test-compiles:
 	./doc/scripts/compile-all.sh .
