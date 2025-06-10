@@ -24,7 +24,7 @@ struct LineContainer : multiset<Line, less<>> {
 		return x->p >= y->p;
 	}
 	void add(ll k, ll m) {
-		// uncomment for max
+		// uncomment for min
 		//k=-k;
 		//m=-m;
 		auto z = insert({k, m, 0}), y = z++, x = y;
@@ -36,7 +36,7 @@ struct LineContainer : multiset<Line, less<>> {
 	ll query(ll x) {
 		assert(!empty());
 		auto l = *lower_bound(x);
-		// uncomment for max
+		// uncomment for min
 		//return -(l.k * x + l.m);
 		return (l.k * x + l.m);
 	}
