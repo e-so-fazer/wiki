@@ -1,5 +1,30 @@
 \chapter{DP}
 
+\section{Optimizacao}
+\subsection{Desigualdade Triangular}
+\begin{align*}
+	&a < b < c < d \\
+	&C[a][d] + C[b][c] >= C[a][c] + C[b][d]
+\end{align*}
+\subsubsection{Exemplo}
+ Partition and array of size N in K groups, the cost of each group is the sum of $(freq[x] * x)^2$ 
+for each element inside the group.
+\begin{align*}
+	&f_a = freq(x)(a...b) \\
+	&f_b = freq(x)(b...c) \\
+	&f_c = freq(x)(c...d) \\
+	&(x * (f_a + f_b + f_c))^2 + (x * f_b)^2 >= \\
+	&(x * (f_a + f_b))^2 + (x * (f_b + f_c))^2 \\
+	\\
+	&(f_a + f_b + f_c)^2 + f_b^2 >= \\
+	&(f_a + f_b)^2 + (f_b + f_c)^2 \\
+	\\
+	& f_a^2 + f_b^2 + f_c^2 + 2f_af_b + 2*f_af_c + 2*f_bf_c + f_b^2 >= \\
+	&f_a^2 + 2f_af_b + f_b^2 + f_b^2 + f_c^2 + 2f_bf_c\\
+	\\
+	& 2*f_af_c >= 0
+\end{align*}
+
 \kactlimport{sos.h}
 \kactlimport{CHT.h}
 \kactlimport{submasks.h}
