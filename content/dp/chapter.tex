@@ -1,6 +1,39 @@
 \chapter{DP}
 
 \section{Optimizacao}
+\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{4pt}
+
+\begin{small}
+\textbf{Convex Hull Opt. 1}
+\begin{itemize}[leftmargin=*]
+    \item Recurrence: \(\mathrm{dp}[i] = \min_{j<i} \{\mathrm{dp}[j] + b[j] \cdot a[j]\}\)
+    \item Condition: \(b[j] \ge b[j+1]\) (opt. \(a[i] \le a[i+1]\))
+    \item Complexity: Orig. \(O(n^2)\), Opt. \(O(n)\)
+\end{itemize}
+
+\textbf{Convex Hull Opt. 2}
+\begin{itemize}[leftmargin=*]
+    \item Recurrence: \(\mathrm{dp}[i][j] = \min_{k<j} \{\mathrm{dp}[i-1][k] + b[k] \cdot a[j]\}\)
+    \item Condition: \(b[k] \ge b[k+1]\) (opt. \(a[j] \le a[j+1]\))
+    \item Complexity: Orig. \(O(kn^2)\), Opt. \(O(kn)\)
+\end{itemize}
+
+\textbf{Divide \& Conquer Opt.}
+\begin{itemize}[leftmargin=*]
+    \item Recurrence: \(\mathrm{dp}[i][j] = \min_{k<j} \{\mathrm{dp}[i-1][k] + C[k][j]\}\)
+    \item Condition: \(A[i][j] \le A[i][j+1]\)
+    \item Complexity: Orig. \(O(kn^2)\), Opt. \(O(kn\log n)\)
+\end{itemize}
+
+\textbf{Knuth Opt.}
+\begin{itemize}[leftmargin=*]
+    \item Recurrence: \(\mathrm{dp}[i][j] = \min_{i<k<j} \{\mathrm{dp}[i][k] + \mathrm{dp}[k][j]\} + C[i][j]\)
+    \item Condition: \(A[i, j-1] \le A[i, j] \le A[i+1, j]\)
+    \item Complexity: Orig. \(O(n^3)\), Opt. \(O(n^2)\)
+\end{itemize}
+\end{small}
+
 \subsection{Desigualdade Triangular}
 \begin{align*}
 	&a < b < c < d \\
