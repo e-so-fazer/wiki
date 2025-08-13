@@ -1,8 +1,8 @@
 /**
  * Author: Ruan Petrus
- * Description: Queries of deleting and adding edges. After each query count how many bridges are in the graph
- * Can be changed by modifying Spec
- * Time: O(\log N)
+ * Description: K Queries of deleting and adding edges in a graph of size N. 
+   After each query count how many bridges are in the graph
+ * Time: O(N + K\log K)
  * Status: stress-tested
  */
 
