@@ -9,12 +9,12 @@
 template<class S> struct KMP {
 	S p; int n; vector<int> nb;
 	KMP(S& ap) : p(ap), n(sz(p)), nb(n+1) {
-		for(int k = 1; k < n; k++) nb[k+1] = nxt(nb[k], P[k]);
+		for(int k = 1; k < n; k++) nb[k+1] = nxt(nb[k], p[k]);
 	}
 	
 	int nxt(int i, auto c){
-		for(; i; i = nb[i])if (i < n and P[i]==c)return i+1;
-		return P[0]==c;
+		for(; i; i = nb[i])if (i < n and p[i]==c)return i+1;
+		return p[0]==c;
 	}
 };
 

@@ -23,7 +23,8 @@ struct custom_hash{
 template<class A, class B>
 using hash_map = unordered_map<A, B, custom_hash>;
 
-//needs #include<bits/extc++.h> and using GNU::__gnu_pbds
+#include<bits/extc++.h>
+#define GNU __gnu_pbds
 template<class A, class B>
 using hash_table = GNU::gp_hash_table<A, B, custom_hash, equal_to<A>,
 GNU::direct_mask_range_hashing<>, GNU::linear_probe_fn<>, 

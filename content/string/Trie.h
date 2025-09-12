@@ -29,10 +29,10 @@ struct alphabet{
 };
 
 template<class A>
-struct Trie{
+struct TrieS{
 	using T = typename A::T;
 	vector<vector<int>> g; vi cnt;
-	Trie():g(1,vector<int>(A::sz,0)),cnt(1,0){}
+	TrieS():g(1,vector<int>(A::sz,0)),cnt(1,0){}
 	int new_node(){g.pb(vector<int>(A::sz,0)); cnt.pb(0); return sz(g)-1;}
 	template<class S> void insert(const S & s){
 		int cur = 0;
