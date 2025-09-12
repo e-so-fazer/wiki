@@ -1,26 +1,30 @@
 /**
- * Author: Arthur Botelho, Eduardo Freire
+ * Author: Arthur Botelho
  * Description: KMP automaton
- * Time: O(alphabet size * N) build, O(1) query
- * Memory: O(alphabet size * N)
+ * Time: O(N) build, O(1) query (amortized)
+ * Memory: O(N)
  * Status: stress tested
 */
 
-template<class T>
-struct KMP{
-	int n; vi p; T in; vector<vi> a;
-	template<class S>
-	KMP(S s, T ain, int asz):n(sz(s)),p(n,0),in(ain),a(n+1,vi(asz,0)){
-		rep(i, 1, n){
-			int j = p[i-1];
-			while(j and s[j]!=s[i])j = p[j-1];
-			p[i] = j + (s[i]==s[j]);
-			
-		}
-		rep(i, 0, n+1) rep(c, 0, asz){
-				if (i and (i==n or c+in!=s[i]))a[i][c] = a[p[i-1]][c];
-				else a[i][c] = i + (c+in == s[i]);
-			}
+template<class S> struct KMP {
+	S p; int n; vector<int> nb;
+	KMP(S& ap) : p(ap), n(sz(p)), nb(n+1) {
+		for(int k = 1; k < n; k++) nb[k+1] = nxt(nb[k], P[k]);
 	}
-	int nxt(int cur, T c){return a[cur][c-in];}
+	
+	int nxt(int i, auto c){
+		for(; i; i = nb[i])if (i < n and P[i]==c)return i+1;
+		return P[0]==c;
+	}
 };
+
+/* DFA
+	vector<vector<int>> dfa(n+1, vector<int>(26));
+    void build_dfa(){
+        dfa[0][P[0]] = 1; //only way to advance at 0
+        for(int k = 1; k <= n; k++)
+            for(int c = 0; c < 26; c++)
+                if (k < n and P[k] == 'a'+c) dfa[k][c] = k+1;
+                else dfa[k][c] = dfa[neighbor[k]][c];
+    }
+*/

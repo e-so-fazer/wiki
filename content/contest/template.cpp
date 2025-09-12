@@ -1,6 +1,16 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+
+#ifdef PRAGMAS //pragmas
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+#endif
+
+#ifdef LOCAL
+#define debug(x...) cout<<"["#x"]: ",[](auto...$){((cout<<$<<"; "),...);}(x),cout<<endl
+#else
+#define debug(...) {}
+#endif
 
 //#define int long long
 #define endl '\n'
@@ -8,7 +18,6 @@ using namespace std;
 #define rep(i, a, b) for(int i = (a); i < (b); ++i)
 #define all(x) begin(x), end(x)
 #define sz(x) (int)(x).size()
-#define debug(var) cerr << #var << ": " << var << endl
 #define pb push_back
 #define eb emplace_back
 typedef long long ll;
