@@ -8,7 +8,7 @@
  */
 
 template<class S>
-struct DiST{ using T = S::T;
+struct DiST{ using T = typename S::T;
 	int n, h; vector<vector<T>> t;
 	int lg(signed x){return __builtin_clz(1)-__builtin_clz(x);}
 	DiST(vector<T> v): n(sz(v)), h(lg(n)){
