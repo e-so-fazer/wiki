@@ -7,6 +7,7 @@
  * Status: Not stress tested
  */
 #pragma once
+#include "SegSpec.h"
 
 template<typename LS>
 struct Node {

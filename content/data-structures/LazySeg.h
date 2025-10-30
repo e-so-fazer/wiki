@@ -6,6 +6,7 @@
  * Status: stress-tested
  */
 #pragma once
+#include "SegSpec.h"
 
 template<typename Spec>
 struct LazySeg {
@@ -93,13 +94,4 @@ struct LazySeg {
 			has_lazy[no] = false;
 		}
 	}
-};
-
-struct Spec {
-	using S = int;
-	using K = int;
-	static S op(S a, S b) { return max(a, b); }
-	static S update(K f, S a) { return f + a; }
-	static K compose(const K f, const K g) { return f + g; }
-	static S id() { return 0; }
 };

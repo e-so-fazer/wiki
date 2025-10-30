@@ -6,6 +6,7 @@
  * Status: stress-tested
  */
 #pragma once
+#include "SegSpec.h"
 
 template<typename LS>
 struct SegTree {
