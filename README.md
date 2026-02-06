@@ -9,12 +9,18 @@ The build process uses the following tools:
 - make
 - bc
 
-Downloading latex on ubuntu and debian base linux:
+Downloading latex on ubuntu:
+Debian:
 ```sh
 sudo apt-get install texlive-latex-base texlive-latex-recommended texlive-latex-extra
 sudo apt-get install build-essential
 sudo apt-get install python3
 suto apt-get install bc
+```
+Arch:
+```sh
+sudo pacman -S base-devel python bc cmake ninja git
+sudo pacman -S texlive-core texlive-latexrecommended texlive-latexextra texlive-plaingeneric texlive-fontsrecommended
 ```
 
 # Running
